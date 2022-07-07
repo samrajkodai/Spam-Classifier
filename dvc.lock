@@ -1,0 +1,18 @@
+schema: '2.0'
+stages:
+  load_data:
+    cmd: python src/load_data.py --config=config/params.yaml
+    deps:
+    - path: Dataset/spam_or_not_spam.csv
+      md5: 542fcda968bf53d9e01e71c34c180cb3
+      size: 4256112
+    - path: src/get_data.py
+      md5: 4db7337bc28fa301aaac99932b0f85fa
+      size: 711
+    - path: src/load_data.py
+      md5: a4e65f552cb0083b14795b7376e4007b
+      size: 658
+    outs:
+    - path: data/raw/spam_or_not_spam.csv
+      md5: 542fcda968bf53d9e01e71c34c180cb3
+      size: 4259113
