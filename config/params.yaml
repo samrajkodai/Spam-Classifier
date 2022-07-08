@@ -2,6 +2,7 @@ base:
   project: spam-message-classifier
   random_state: 42
   target_col: label
+  main_col: email
 
 data_source:
   batch_files: Dataset/spam_or_not_spam.csv
@@ -9,10 +10,27 @@ data_source:
 
 load_data:
   raw_dataset_csv: data/raw/spam_or_not_spam.csv
+  x_csv: data/raw/x_array.csv.npy
+  y_csv: data/raw/y_array.csv.npy
+
+dl_params:
+  voc_size: 5000
+  sent_length: 200
+  padding: pre
+  embedding_vector_features: 40
+  LSTM: 100
+  loss: binary_crossentropy
+  optimizer: adam
+  metrics: accuracy
+  activation: sigmoid
+  epochs: 10
+  batch_size: 64
 
 split_data:
-  train_path: data/processed/train_spam_or_not_spam.csv
-  test_path: data/processed/test_spam_or_not_spam.csv
+  x_train_path: data/processed/x_train_spam_or_not_spam.csv.npy
+  x_test_path: data/processed/x_test_spam_or_not_spam.csv.npy
+  y_train_path: data/processed/y_train_spam_or_not_spam.csv.npy
+  y_test_path: data/processed/y_test_spam_or_not_spam.csv.npy
   test_size: 0.2
 
 estimators:

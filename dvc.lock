@@ -15,4 +15,29 @@ stages:
     outs:
     - path: data/raw/spam_or_not_spam.csv
       md5: 542fcda968bf53d9e01e71c34c180cb3
-      size: 4259113
+      size: 4256112
+  split_data:
+    cmd: python src/split_data.py --config=config/params.yaml
+    deps:
+    - path: data/raw/x_array.csv.npy
+      md5: 68c181632b7aaaad724ac67bfe6a2221
+      size: 2400128
+    - path: data/raw/y_array.csv.npy
+      md5: 6bf288d22c34ac62069a42952432f0d6
+      size: 24128
+    - path: src/split_data.py
+      md5: 75fd8d789b2183e5b9283a7923631f5d
+      size: 1445
+    outs:
+    - path: data/processed/x_test_spam_or_not_spam.csv.npy
+      md5: c79f53ab218d8cb548ca8cd8453aff87
+      size: 480128
+    - path: data/processed/x_train_spam_or_not_spam.csv.npy
+      md5: 9ae923ded4db252579b1e84443f6a3eb
+      size: 1920128
+    - path: data/processed/y_test_spam_or_not_spam.csv.npy
+      md5: c1c69d651a217046190dc5b36de21b9f
+      size: 4928
+    - path: data/processed/y_train_spam_or_not_spam.csv.npy
+      md5: 168fa337dc90946b305f0a0c1f5931d7
+      size: 19328
