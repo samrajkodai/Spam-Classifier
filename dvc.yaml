@@ -32,7 +32,6 @@ stages:
       metrics:
       - reports/scores.json:
           cache: false
-      - reports/params.json:
-          cache: false
+     
 
      
