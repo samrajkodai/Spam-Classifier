@@ -34,12 +34,6 @@ def train_and_evaluate(config_path):
     y_train_data_path = config["split_data"]["y_train_path"]
     random_state = config["base"]["random_state"]
     model_dir = config["model_dir"]
-
-    x_train= load(x_train_data_path,allow_pickle=True)
-    x_test=load(x_test_data_path,allow_pickle=True)
-    y_train = load(y_train_data_path,allow_pickle=True)
-    y_test=load(y_test_data_path,allow_pickle=True)
-
     voc_size=config['dl_params']['voc_size']
     sent_length=config['dl_params']['sent_length']
     padding=config['dl_params']['padding']
@@ -50,6 +44,12 @@ def train_and_evaluate(config_path):
     metrics=config['dl_params']['metrics']
     epochs=config['dl_params']['epochs']
     batch_size=config['dl_params']['batch_size']
+    scores_file = config["reports"]["scores"]
+    params_file = config["reports"]["params"]
+    x_train= load(x_train_data_path,allow_pickle=True)
+    x_test=load(x_test_data_path,allow_pickle=True)
+    y_train = load(y_train_data_path,allow_pickle=True)
+    y_test=load(y_test_data_path,allow_pickle=True)
 
     model=Sequential()
     model.add(Embedding(voc_size,embed_features,input_length=sent_length))
@@ -66,8 +66,7 @@ def train_and_evaluate(config_path):
     print(y_pred)
     (accuracy,matrix)=evaluation(y_test,y_pred.round())
 
-    scores_file = config["reports"]["scores"]
-    params_file = config["reports"]["params"]
+
 
     with open(scores_file, "w") as f:
         scores = {

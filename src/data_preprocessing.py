@@ -15,6 +15,7 @@ from numpy import savetxt
 import numpy as np
 from tensorflow.keras.layers import Embedding
 from tensorflow.keras.preprocessing.sequence import pad_sequences
+import pickle
 
 def preprocessing(config_path):
     global corpus
@@ -27,7 +28,7 @@ def preprocessing(config_path):
 
     for i in df.columns:
         if df[i].isnull().sum()>0:
-            print(i,df[i].isnull().sum())
+            nul=df.isnull().sum().plot(kind='bar')
             df[i].fillna("0",inplace=True)
 
     corpus=[]

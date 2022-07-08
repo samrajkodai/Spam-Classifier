@@ -41,3 +41,25 @@ stages:
     - path: data/processed/y_train_spam_or_not_spam.csv.npy
       md5: 168fa337dc90946b305f0a0c1f5931d7
       size: 19328
+  train_and_evaluate:
+    cmd: python src/train_evaluate.py --config=config/params.yaml
+    deps:
+    - path: data/processed/x_test_spam_or_not_spam.csv.npy
+      md5: c79f53ab218d8cb548ca8cd8453aff87
+      size: 480128
+    - path: data/processed/x_train_spam_or_not_spam.csv.npy
+      md5: 9ae923ded4db252579b1e84443f6a3eb
+      size: 1920128
+    - path: data/processed/y_test_spam_or_not_spam.csv.npy
+      md5: c1c69d651a217046190dc5b36de21b9f
+      size: 4928
+    - path: data/processed/y_train_spam_or_not_spam.csv.npy
+      md5: 168fa337dc90946b305f0a0c1f5931d7
+      size: 19328
+    - path: src/train_evaluate.py
+      md5: 02f7e064d8cae241e7801cb5a8620a6e
+      size: 3171
+    outs:
+    - path: reports/scores.json
+      md5: 6f5009dfcd4e80835221798914aef0b7
+      size: 46
