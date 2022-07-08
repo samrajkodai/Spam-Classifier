@@ -16,6 +16,8 @@ from get_data import read_params,get_data
 from sklearn.naive_bayes import GaussianNB
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Embedding,LSTM,Dense
+from tensorflow.keras.preprocessing.sequence import pad_sequences
+from tensorflow.keras.preprocessing.text import one_hot
 
 def evaluation(x,y):
     accuracy=accuracy_score(x,y)
@@ -62,6 +64,25 @@ def train_and_evaluate(config_path):
 
     y_pred=model.predict(x_test)  
     print(y_pred)
+    (accuracy,matrix)=evaluation(y_test,y_pred.round())
+
+    scores_file = config["reports"]["scores"]
+    params_file = config["reports"]["params"]
+
+    with open(scores_file, "w") as f:
+        scores = {
+            "accuracy score": accuracy
+        }
+        json.dump(scores, f, indent=4)
+
+    
+
+
+    os.makedirs(model_dir, exist_ok=True)
+    model.save(os.path.join(model_dir,"spam classifier.h5"))
+    
+
+       
 if __name__=="__main__":
     args=argparse.ArgumentParser()
     args.add_argument("--config",default="config/params.yaml")
