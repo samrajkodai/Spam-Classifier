@@ -1,7 +1,6 @@
 from distutils.command.config import config
 import imp
 import os
-from django import conf 
 import pandas as pd
 from pyparsing import Word, col
 from nltk.corpus import stopwords
