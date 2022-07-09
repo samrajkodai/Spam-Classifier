@@ -12,4 +12,4 @@ flake8
 flask
 gunicorn
 PyYAML
-tensorflow==2.7.0
+tensorflow
