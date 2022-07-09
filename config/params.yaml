@@ -41,10 +41,10 @@ estimators:
       alpha: 0.9
       l1_ratio: 0.4
 
-model_dir: models
+model_dir: models/spam classifier.h5/spam classifier.h5/spam classifier.h5
 
 reports:
   params: reports/params.json
   scores: reports/scores.json
 
-webapp_model_dir: prediction_service/model/model.joblib
+webapp_model_dir: machine learning/models/spam classifier.h5
