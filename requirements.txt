@@ -12,5 +12,5 @@ flake8
 flask
 gunicorn
 PyYAML
-tensorflow==2.7.0
+tensorflow==2.8.0
 nltk
