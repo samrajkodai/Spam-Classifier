@@ -14,3 +14,4 @@ gunicorn
 PyYAML
 tensorflow-cpu
 nltk
+mlflow

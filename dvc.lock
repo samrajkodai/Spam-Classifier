@@ -20,20 +20,20 @@ stages:
     cmd: python src/split_data.py --config=config/params.yaml
     deps:
     - path: data/raw/x_array.csv.npy
-      md5: 68c181632b7aaaad724ac67bfe6a2221
+      md5: c33b4112f6eb6eeacb03924431bfe3d9
       size: 2400128
     - path: data/raw/y_array.csv.npy
       md5: 6bf288d22c34ac62069a42952432f0d6
       size: 24128
     - path: src/split_data.py
-      md5: 75fd8d789b2183e5b9283a7923631f5d
-      size: 1445
+      md5: dcc93cc1df304d596584a90ecc78aa32
+      size: 1512
     outs:
     - path: data/processed/x_test_spam_or_not_spam.csv.npy
-      md5: c79f53ab218d8cb548ca8cd8453aff87
+      md5: 1eaa381f500995ea3cc68286f94feeca
       size: 480128
     - path: data/processed/x_train_spam_or_not_spam.csv.npy
-      md5: 9ae923ded4db252579b1e84443f6a3eb
+      md5: 4f80f6a983dd140918111ec168355797
       size: 1920128
     - path: data/processed/y_test_spam_or_not_spam.csv.npy
       md5: c1c69d651a217046190dc5b36de21b9f
@@ -45,10 +45,10 @@ stages:
     cmd: python src/train_evaluate.py --config=config/params.yaml
     deps:
     - path: data/processed/x_test_spam_or_not_spam.csv.npy
-      md5: c79f53ab218d8cb548ca8cd8453aff87
+      md5: 1eaa381f500995ea3cc68286f94feeca
       size: 480128
     - path: data/processed/x_train_spam_or_not_spam.csv.npy
-      md5: 9ae923ded4db252579b1e84443f6a3eb
+      md5: 4f80f6a983dd140918111ec168355797
       size: 1920128
     - path: data/processed/y_test_spam_or_not_spam.csv.npy
       md5: c1c69d651a217046190dc5b36de21b9f
@@ -57,9 +57,5 @@ stages:
       md5: 168fa337dc90946b305f0a0c1f5931d7
       size: 19328
     - path: src/train_evaluate.py
-      md5: 02f7e064d8cae241e7801cb5a8620a6e
-      size: 3171
-    outs:
-    - path: reports/scores.json
-      md5: 6f5009dfcd4e80835221798914aef0b7
-      size: 46
+      md5: 8f20c2d7869cf3d580514e6ff02c086e
+      size: 4047

@@ -48,3 +48,10 @@ reports:
   scores: reports/scores.json
 
 webapp_model_dir: machine learning/models/spam classifier.h5
+
+mlflow_config:
+  artifacts_dir: artifacts
+  experiment_name: LSTM
+  run_name: mlops
+  registered_model_name: LSTMSpam
+  remote_server_uri: http://localhost:1234
