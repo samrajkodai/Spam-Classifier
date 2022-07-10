@@ -27,7 +27,7 @@ config = ConfigProto()
 config.gpu_options.allow_growth = True
 session = InteractiveSession(config=config)
 
-app=Flask(__name__)
+app=Flask(__name__,static_folder=static_dir,template_folder=template_dir)
 
 
 
