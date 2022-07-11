@@ -2,7 +2,7 @@ Spam Message Classifier
 ==============================
 The Aim of the project is to find the text given by the user is spam or not.
 
-![Alt Text](https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif)
+![Alt Text]("machine learning\spam_gif.gif")
 
 Project Organization
 ------------
