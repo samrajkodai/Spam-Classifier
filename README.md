@@ -1,5 +1,7 @@
 
-#  Spam Message Classifier
+# <a href="url"><img src="https://user-images.githubusercontent.com/61903698/178227001-a84748ea-5fe9-4157-8db1-4a4efc94f694.png" align="left" height="48" width="48" ></a>  Spam Message Classifier
+
+
 
 The Aim of the project is to find the text given by the user is spam or not.
 
