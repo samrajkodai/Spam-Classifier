@@ -1,16 +1,20 @@
 
-# <a href="url"><img src="https://user-images.githubusercontent.com/61903698/178227001-a84748ea-5fe9-4157-8db1-4a4efc94f694.png" align="left" height="48" width="48" ></a>  Spam Message Classifier
+# <a href="url"><img src="https://user-images.githubusercontent.com/61903698/178227001-a84748ea-5fe9-4157-8db1-4a4efc94f694.png" align="left" height="48" width="48" ></a> <a href="url"><img src="https://user-images.githubusercontent.com/61903698/178227384-dc1bcff2-9649-4dd8-af12-3c8c7bc4ad0b.jpg" align="left" height="48" width="48" ></a>  Spam Message Classifier
 
-
-
-The Aim of the project is to find the text given by the user is spam or not.
-
-## Demo
 ![spam_gif](https://user-images.githubusercontent.com/61903698/178225864-9e86bda1-0c6e-4665-9a55-7c6c614ebaae.gif)
 
 
 for live project you can visit https://spamclass.herokuapp.com/
-# Installation
+
+## <a href="url"><img src="https://user-images.githubusercontent.com/61903698/178228250-a11a8416-3443-4c90-8616-8eda1edc4572.jpg" align="left" height="48" width="48" ></a>Description
+The Aim of the project is to find the text given by the user is spam or not.
+
+## <a href="url"><img src="https://user-images.githubusercontent.com/61903698/178230062-a2e8bf94-4769-4e02-a26b-ed3696aae3fe.png" align="left" height="48" width="48" ></a>Dataset
+you can download and use the dataset from kaggle please visit this link to download the dataset
+
+https://www.kaggle.com/search?q=spam+email+in%3Adatasets](https://www.kaggle.com/datasets/ozlerhakan/spam-or-not-spam-dataset)
+
+## <a href="url"><img src="https://user-images.githubusercontent.com/61903698/178229350-7f29d4eb-e758-455d-ab8e-87ef337e1880.png" align="left" height="48" width="48" ></a> Installation
 
 ### Libraries
 * dvc
@@ -33,7 +37,10 @@ to install above libraries please run the command
      pip install requirements.txt
 ```
 
-## Deployment
+
+
+
+##  <a href="url"><img src="https://user-images.githubusercontent.com/61903698/178230859-ca0b335b-1792-456a-a535-2a0462361e75.png" align="left" height="48" width="48" ></a>  Deployment
 
 To deploy this project run
 
@@ -55,11 +62,15 @@ To deploy this project run
 
 ```
 
-## Screenshots
+
+## <a href="url"><img src="https://user-images.githubusercontent.com/61903698/178232811-59ccbc05-50da-4f46-8b4a-e2f9c9d79201.png" align="left" height="48" width="48" ></a> Screenshots
 
 ![Screenshot 2022-07-11 134833](https://user-images.githubusercontent.com/61903698/178226366-6878cb78-35c3-4f9d-8d26-5c3e9697836c.jpg)
 
-## Badges
+
+
+
+## <a href="url"><img src="https://user-images.githubusercontent.com/61903698/178231990-81b6bcce-dbaa-4180-b363-dcc694e76a1e.png" align="left" height="48" width="48" ></a>  Badges
 
 [![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/tterb/atomic-design-ui/blob/master/LICENSEs)
 
