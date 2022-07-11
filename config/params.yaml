@@ -45,9 +45,9 @@ model_dir: models/spam classifier.h5/spam classifier.h5/spam classifier.h5
 
 reports:
   params: reports/params.json
-  scores: reports/scores.json
+  scores: reports/scores.json 
 
-webapp_model_dir: machine learning/models/spam classifier.h5
+webapp_model_dir: machine learning/prediction_service/models/spam classifier.h5
 
 mlflow_config:
   artifacts_dir: artifacts
