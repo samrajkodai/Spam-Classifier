@@ -29,20 +29,33 @@
 </head>
 <body>
   
+  
     <main id="main">
 
-      <nav class="navbar navbar-light bg-light">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#" style="font-size: 22px;">
-            <img src="/static/assets/img/spam_icon.jpg" alt="" width="50%" height="24" class="d-inline-block align-text-top">
-            Spam Message Classifier
-          </a>
-        </div>
-      </nav>
+              <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top " >
+    <div class="container d-flex align-items-center justify-content-between">
+      <h1 class="logo"><a>Spam Classifier</a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          
+    
+        
+          <li><a class="getstarted scrollto" href="#about">Get Started</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
     
        <!-- ======= Portfolio Details Section ======= -->
   <section id="portfolio-details" class="portfolio-details">
-    <div class="container" data-aos="fade-up">
+    <div class="container" data-aos="fade-up" style="margin-top: 8%;">
 
       <div class="row gy-4">
 
@@ -65,7 +78,7 @@
           </div>
         </div>
 
-        <div class="col-lg-4">
+        <div class="col-lg-4" >
           <div class="portfolio-info">
             <h3>Project information</h3>
             <ul>
@@ -88,85 +101,90 @@
     </div>
   </section><!-- End Portfolio Details Section -->
 
-         <section id="pricing" class="pricing">
+
+  <!-- ======= Frequently Asked Questions Section ======= -->
+  <section id="faq" class="faq">
     <div class="container" data-aos="fade-up">
 
-      <div class="section-header">
+      <div class="section-title">
         <h2>Live Project</h2>
-        <p>you can give any input it can able to classofy the spam messages</p>
+        <p>you can give any input it can able to predict the emotions !!!!!!!!!!!!</p>
       </div>
 
-      <div class="row gy-4">
-
-        <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="200">
-        
-        </div><!-- End Pricing Item -->
-
-        <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="400">
-          <div class="pricing-item featured">
-
-            <div class="pricing-header">
-              <h3>Spam Message Classifier</h3>
-             
-            </div>
-
-            <div>
-              <!-- <form id="upload-file" method="post" enctype="multipart/form-data">
-                  <label for="imageUpload" class="upload-label">
-                      Choose...
-                  </label>
-                  <input type="text" id="myText" value="Mickey">
+          <div class="row gy-4">
+    
+            <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="200">
+            
+            </div><!-- End Pricing Item -->
+    
+            <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="400">
+              <div class="pricing-item featured">
+                </div>
+    
+                <div>
+                  <!-- <form id="upload-file" method="post" enctype="multipart/form-data">
+                      <label for="imageUpload" class="upload-label">
+                          Choose...
+                      </label>
+                      <input type="text" id="myText" value="Mickey">
+                     
+                  </form> -->
+    
+                  <form method="post" action="register">
+                  
+                    <div class="form-row align-items-center">
+                      <br>
+                      <br>
+                      <div class="form-group mt-3" >
+                        <textarea class="form-control" name="spam" placeholder="Message" id="myText" required style="height: 200px !important; width: 100% !important;" ></textarea>
+                      </div>
+      
+                  
+                    </form>
+              
+       
                  
-              </form> -->
-
-              <form method="post" action="register">
+              </div>
+    
               
-                <div class="form-row align-items-center">
+    
                   <br>
                   <br>
-                  <div class="form-group mt-3" >
-                    <textarea class="form-control" name="spam" placeholder="Message" id="myText" required style="height: 200px !important; width: 100% !important;" ></textarea>
-                  </div>
-  
-              
-                </form>
+                <div class="text-center mt-auto">
+                  <!-- <input type="submit" name="predict" id="" class="buy-btn"> -->
+    
+                  <button name="predict" id="btn-predict" class="btn btn-primary">predict</button>
+                  
+                </div>
+
+                <div class="spinner-border text-light" role="status" style="display: none;">
+                  <span class="sr-only"></span>
+                </div>
+    
+                <!-- <div class="spinner-border" role="status" style="display: none;">
+                  <span class="visually-hidden">Loading...</span>
+                  
+                </div> -->
+                
+                <div class="alert alert-light" role="alert" style="margin-top: 2%; background-color: transparent; color: white;  border-color: transparent;">
+                  <h5 id="result" style="color: rgb(255, 255, 255); font-size: 26px;"></h5>
+                </div>
+                
+              </h3>
           
-   
-             
-          </div>
-
-          
-
-              <br>
-              <br>
-            <div class="text-center mt-auto">
-              <!-- <input type="submit" name="predict" id="" class="buy-btn"> -->
-
-              <button name="predict" id="btn-predict" class="buy-btn">predict</button>
-              
-            </div>
-
-            <div class="spinner-border" role="status" style="display: none;">
-              <span class="visually-hidden">Loading...</span>
-              
-            </div>
+    
+              </div>
+            </div><!-- End Pricing Item -->
+    
             
-            <div class="alert alert-light" role="alert" style="margin-top: 2%;">
-              <h5 id="result" style="color: black;"></h5>
-            </div>
-            
-          </h3>
+    
+       
+    
+        </div>
       
 
-          </div>
-        </div><!-- End Pricing Item -->
-
-        
-
-      </div>
-
     </div>
-  </section>
+  </section><!-- End Frequently Asked Questions Section -->
     
       </main><!-- End #main -->
      
