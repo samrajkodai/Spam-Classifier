@@ -66,7 +66,7 @@ To deploy this project run
 ## <a href="url"><img src="https://user-images.githubusercontent.com/61903698/178232811-59ccbc05-50da-4f46-8b4a-e2f9c9d79201.png" align="left" height="48" width="48" ></a> Screenshots
 
 
-<img src="https://user-images.githubusercontent.com/61903698/179744083-e4a3f62f-2395-47ad-b3b7-6e0ff9256574.jpeg" width=60% height=50%>
+<img src="https://user-images.githubusercontent.com/61903698/179744083-e4a3f62f-2395-47ad-b3b7-6e0ff9256574.jpeg" width=40% height=30%>
 
 
 
